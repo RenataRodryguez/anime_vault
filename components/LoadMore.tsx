@@ -1,6 +1,10 @@
+"use client";
+
 import Image from "next/image";
+import { useInView } from "react-intersection-observer";
 
 function LoadMore() {
+  const { ref, inView } = useInView();
   return (
     <>
       <section className="flex justify-center items-center w-full">
