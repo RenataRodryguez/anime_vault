@@ -4,28 +4,29 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import { fetchAnime } from "@/app/action";
-import { useFormState } from "react-dom";
-import AnimeCard, { AnimeProp } from "./AnimeCard";
-import { log } from "console";
+import AnimeCard from "./AnimeCard";
+
+let page = 2;
+
+export type AnimeCard = JSX.Element;
 
 function LoadMore() {
   const { ref, inView } = useInView();
-  const [data, setData] = useState<AnimeProp[]>([]);
+  const [data, setData] = useState<AnimeCard[]>([]);
 
   useEffect(() => {
     if (inView) {
-      fetchAnime(2).then((res) => {
+      fetchAnime(page).then((res) => {
         console.log(res);
         setData([...data, ...res]);
+        page++;
       });
     }
   }, [inView, data]);
   return (
     <>
       <section className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10">
-        {data?.map((item: AnimeProp, index) => (
-          <AnimeCard key={item.id} anime={item} index={index} />
-        ))}
+        {data}
       </section>
       <section className="flex justify-center items-center w-full">
         <div ref={ref}>
