@@ -6,22 +6,18 @@ Anime Vault is a streaming platform designed specifically for anime enthusiasts.
 
 ## Functionalities
 
-• Watch anime with high performance
-• Community platform, perfect for analyzing and discussing content
-• Stylish and responsive interface built with CSS and React components
+- Watch anime with high performance
+- Community platform, perfect for analyzing and discussing content
+- Stylish and responsive interface built with CSS and React components
 
 ---
 
 ## Technologies Used
 
-• React: Framework for building dynamic user interfaces.
-• Tailwind CSS: Framework for fast and responsive styling.
-• JavaScript (ES6+): Data manipulation and business logic.
-• TypeScript: Optional support for static typing.
-
----
-
-Here’s the translation of your query into English:
+- React: Framework for building dynamic user interfaces.
+- Tailwind CSS: Framework for fast and responsive styling.
+- JavaScript (ES6+): Data manipulation and business logic.
+- TypeScript: Optional support for static typing.
 
 ---
 
